@@ -1,0 +1,42 @@
+type=input("Enter the type of input:")
+class palin:
+    def num_palindrome(self):
+       a=int(input("Enter the number:"))
+       global original_num
+       original_num=a
+       l = []
+       while a > 0:
+             x = a % 10
+             l.append(str(x))
+             a //= 10
+       y = "".join(l)
+       z = int(y)
+       print("The reversed number is:",z)
+       return z
+    def str_palindrome(self):
+        b=input("Enter the string:")
+        global original_str
+        original_str=b
+        c=b[::-1]
+        print("reversed string is:",c)
+        return c
+class Invalidtype(Exception):
+    pass
+obj=palin()
+try:
+ if type=="int":
+    obj.num_palindrome()
+    if obj.num_palindrome==original_num:
+        print("the given number is palindrome")
+    else:
+        print("the given number is not palindrome")
+ elif type=="str":
+    obj.str_palindrome()
+    if obj.str_palindrome==original_str:
+        print("the given string is palindrome")
+    else:
+        print("the given string is not palindrome")
+ else:
+     raise Invalidtype
+except Invalidtype:
+    print("Error:Enter correct type of input")
