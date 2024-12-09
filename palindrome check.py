@@ -1,3 +1,4 @@
+type=input("Enter the type of input(int/str):")
 class Palin:
     def num_palindrome(self):
         a=int(input("Enter the number:"))
@@ -18,7 +19,6 @@ class Palin:
         return c,b
 class InvalidType(Exception):
     pass
-type=input("Enter the type of input:")
 obj=Palin()
 try:
     if type=="int":
