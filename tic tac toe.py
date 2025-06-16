@@ -7,7 +7,7 @@ print(" ")
 print("BOTH PLAYERS CHOOSE HEADS OR TAILS. YOU HAVE 10 SECONDS OF TIME TO DECIDE.")
 print(" ")
 toss=r.choice(["HEADS","TAILS"])
-time.sleep(1)
+time.sleep(10)
 print(toss)
 l=[["1","2","3"],["4","5","6"],["7","8","9"]]
 for i in range(0,3):
